@@ -43,9 +43,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "restricted"
-  },
   "directories": {
     "doc": "docs",
     "test": "test"
