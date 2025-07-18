@@ -1,5 +1,5 @@
 {
-  "name": "matroid-node-client",
+  "name": "@matroid/node-client",
   "version": "1.0.0",
   "description": "The Matroid API allows you to easily manipulate and use detectors. You can browse through our fine-tuned detectors, customize detectors with your own images and videos, and even import your own tensorflow models as detectors. Public detectors are available for all of our users, and you can quickly train custom detectors when needed. You can further polish your detectors through our simple web GUI, where you can create composite detectors or topic detectors, give your detectors feedback, and automatically annotate training data.   Once you are happy with your detector, you can use it to classify images, locate objects in videos, and perform real-time detections in live video streams. Create a stream of your camera feed, and you can use our API to get real-time detections from your detector by creating Monitorings. You can also use our API to get the latest detections from your detector, and you can even get the latest detections from a specific time in the past. Feel free to use this documentation page to learn and test out your API requests. But be careful! **Any changes performed may be permanent.**   ## Getting Started  To get started with the Matroid API, you will need to create an account and obtain an API key. You can do this by signing up on our website. Once you have your API key, you can start using the API to create and manage detectors.  ## Authentication  The Matroid API uses bearer token authentication. You will need to include your API key in the Authorization header of your requests. For example:  ``` Authorization: Bearer YOUR_API_KEY ``` ",
   "license": "MIT",
@@ -43,5 +43,18 @@
   "files": [
     "dist"
   ],
-  "private": true
+  "private": true,
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matroid/matroid-node-client.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/matroid/matroid-node-client/issues"
+  },
+  "homepage": "https://github.com/matroid/matroid-node-client#readme"
 }
