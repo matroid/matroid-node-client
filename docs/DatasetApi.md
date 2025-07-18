@@ -1,11 +1,10 @@
 # MatroidPublicApi.DatasetApi
 
-All URIs are relative to *https://192.168.86.46*
+All URIs are relative to *https://app.matroid.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV1DatasetDatasetIdMediaImMediaIdGet**](DatasetApi.md#apiV1DatasetDatasetIdMediaImMediaIdGet) | **GET** /api/v1/dataset/{datasetId}/media/im/{mediaId} | Get media from dataset
-[**apiV1DatasetsDatasetIdLabelsPut**](DatasetApi.md#apiV1DatasetsDatasetIdLabelsPut) | **PUT** /api/v1/datasets/{datasetId}/labels | Update labels for a dataset
 [**apiV1DetectorsDetectorIdAddDataPost**](DatasetApi.md#apiV1DetectorsDetectorIdAddDataPost) | **POST** /api/v1/detectors/{detectorId}/add-data | Add images to a detector&#39;s dataset (New Studio)
 
 
@@ -59,57 +58,6 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: image/*, application/json
-
-
-## apiV1DatasetsDatasetIdLabelsPut
-
-> ApiV1DatasetsDatasetIdLabelsPut200Response apiV1DatasetsDatasetIdLabelsPut(datasetId, apiV1DatasetsDatasetIdLabelsPutRequest)
-
-Update labels for a dataset
-
-Updates, renames, changes colors, or deletes labels in a dataset. The operation will update all affected annotated images to reflect the label changes. 
-
-### Example
-
-```javascript
-import MatroidPublicApi from 'matroid_public_api';
-let defaultClient = MatroidPublicApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new MatroidPublicApi.DatasetApi();
-let datasetId = "507f1f77bcf86cd799439011"; // String | The unique identifier of the dataset
-let apiV1DatasetsDatasetIdLabelsPutRequest = new MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPutRequest(); // ApiV1DatasetsDatasetIdLabelsPutRequest | 
-apiInstance.apiV1DatasetsDatasetIdLabelsPut(datasetId, apiV1DatasetsDatasetIdLabelsPutRequest, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **datasetId** | **String**| The unique identifier of the dataset | 
- **apiV1DatasetsDatasetIdLabelsPutRequest** | [**ApiV1DatasetsDatasetIdLabelsPutRequest**](ApiV1DatasetsDatasetIdLabelsPutRequest.md)|  | 
-
-### Return type
-
-[**ApiV1DatasetsDatasetIdLabelsPut200Response**](ApiV1DatasetsDatasetIdLabelsPut200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
 
 
 ## apiV1DetectorsDetectorIdAddDataPost

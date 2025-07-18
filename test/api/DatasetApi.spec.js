@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('apiV1DatasetsDatasetIdLabelsPut', function() {
-      it('should call apiV1DatasetsDatasetIdLabelsPut successfully', function(done) {
-        //uncomment below and update the code to test apiV1DatasetsDatasetIdLabelsPut
-        //instance.apiV1DatasetsDatasetIdLabelsPut(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('apiV1DetectorsDetectorIdAddDataPost', function() {
       it('should call apiV1DetectorsDetectorIdAddDataPost successfully', function(done) {
         //uncomment below and update the code to test apiV1DetectorsDetectorIdAddDataPost

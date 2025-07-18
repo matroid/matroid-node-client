@@ -1,6 +1,6 @@
 # MatroidPublicApi.TemporalTaskApi
 
-All URIs are relative to *https://192.168.86.46*
+All URIs are relative to *https://app.matroid.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -135,7 +135,7 @@ api.apiV1AccountGet(callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://192.168.86.46*
+All URIs are relative to *https://app.matroid.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -144,7 +144,6 @@ Class | Method | HTTP request | Description
 *MatroidPublicApi.BucketTasksApi* | [**apiV1BucketTasksPost**](docs/BucketTasksApi.md#apiV1BucketTasksPost) | **POST** /api/v1/bucket-tasks | Create S3 bucket CSV task
 *MatroidPublicApi.BucketTasksApi* | [**apiV1BucketTasksTaskIdDownloadResultsGet**](docs/BucketTasksApi.md#apiV1BucketTasksTaskIdDownloadResultsGet) | **GET** /api/v1/bucket-tasks/{taskId}/download_results | Download bucket search CSV
 *MatroidPublicApi.DatasetApi* | [**apiV1DatasetDatasetIdMediaImMediaIdGet**](docs/DatasetApi.md#apiV1DatasetDatasetIdMediaImMediaIdGet) | **GET** /api/v1/dataset/{datasetId}/media/im/{mediaId} | Get media from dataset
-*MatroidPublicApi.DatasetApi* | [**apiV1DatasetsDatasetIdLabelsPut**](docs/DatasetApi.md#apiV1DatasetsDatasetIdLabelsPut) | **PUT** /api/v1/datasets/{datasetId}/labels | Update labels for a dataset
 *MatroidPublicApi.DatasetApi* | [**apiV1DetectorsDetectorIdAddDataPost**](docs/DatasetApi.md#apiV1DetectorsDetectorIdAddDataPost) | **POST** /api/v1/detectors/{detectorId}/add-data | Add images to a detector&#39;s dataset (New Studio)
 *MatroidPublicApi.DetectorsApi* | [**apiV1DetectorsDetectorIdDelete**](docs/DetectorsApi.md#apiV1DetectorsDetectorIdDelete) | **DELETE** /api/v1/detectors/{detectorId} | Delete a detector
 *MatroidPublicApi.DetectorsApi* | [**apiV1DetectorsDetectorIdFeedbackFeedbackIdDelete**](docs/DetectorsApi.md#apiV1DetectorsDetectorIdFeedbackFeedbackIdDelete) | **DELETE** /api/v1/detectors/{detectorId}/feedback/{feedbackId} | Delete detector feedback
@@ -255,12 +254,6 @@ Class | Method | HTTP request | Description
  - [MatroidPublicApi.ApiV1CollectionsCollectionIdGet200ResponseCollection](docs/ApiV1CollectionsCollectionIdGet200ResponseCollection.md)
  - [MatroidPublicApi.ApiV1CollectionsCollectionIdGet200ResponseCollectionTasksInner](docs/ApiV1CollectionsCollectionIdGet200ResponseCollectionTasksInner.md)
  - [MatroidPublicApi.ApiV1CollectionsPost200Response](docs/ApiV1CollectionsPost200Response.md)
- - [MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPut200Response](docs/ApiV1DatasetsDatasetIdLabelsPut200Response.md)
- - [MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPut400Response](docs/ApiV1DatasetsDatasetIdLabelsPut400Response.md)
- - [MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPut404Response](docs/ApiV1DatasetsDatasetIdLabelsPut404Response.md)
- - [MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPut500Response](docs/ApiV1DatasetsDatasetIdLabelsPut500Response.md)
- - [MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPutRequest](docs/ApiV1DatasetsDatasetIdLabelsPutRequest.md)
- - [MatroidPublicApi.ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner](docs/ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner.md)
  - [MatroidPublicApi.ApiV1DetectorsDetectorIdAddDataPost200Response](docs/ApiV1DetectorsDetectorIdAddDataPost200Response.md)
  - [MatroidPublicApi.ApiV1DetectorsDetectorIdClassifyImagePost200Response](docs/ApiV1DetectorsDetectorIdClassifyImagePost200Response.md)
  - [MatroidPublicApi.ApiV1DetectorsDetectorIdClassifyImagePost200ResponsePredictionsInner](docs/ApiV1DetectorsDetectorIdClassifyImagePost200ResponsePredictionsInner.md)

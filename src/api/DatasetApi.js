@@ -14,11 +14,6 @@
 
 import ApiClient from "../ApiClient";
 import ApiV1BucketTasksPost400Response from '../model/ApiV1BucketTasksPost400Response';
-import ApiV1DatasetsDatasetIdLabelsPut200Response from '../model/ApiV1DatasetsDatasetIdLabelsPut200Response';
-import ApiV1DatasetsDatasetIdLabelsPut400Response from '../model/ApiV1DatasetsDatasetIdLabelsPut400Response';
-import ApiV1DatasetsDatasetIdLabelsPut404Response from '../model/ApiV1DatasetsDatasetIdLabelsPut404Response';
-import ApiV1DatasetsDatasetIdLabelsPut500Response from '../model/ApiV1DatasetsDatasetIdLabelsPut500Response';
-import ApiV1DatasetsDatasetIdLabelsPutRequest from '../model/ApiV1DatasetsDatasetIdLabelsPutRequest';
 import ApiV1DetectorsDetectorIdAddDataPost200Response from '../model/ApiV1DetectorsDetectorIdAddDataPost200Response';
 
 /**
@@ -84,54 +79,6 @@ export default class DatasetApi {
       let returnType = File;
       return this.apiClient.callApi(
         '/api/v1/dataset/{datasetId}/media/im/{mediaId}', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the apiV1DatasetsDatasetIdLabelsPut operation.
-     * @callback module:api/DatasetApi~apiV1DatasetsDatasetIdLabelsPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ApiV1DatasetsDatasetIdLabelsPut200Response} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update labels for a dataset
-     * Updates, renames, changes colors, or deletes labels in a dataset. The operation will update all affected annotated images to reflect the label changes. 
-     * @param {String} datasetId The unique identifier of the dataset
-     * @param {module:model/ApiV1DatasetsDatasetIdLabelsPutRequest} apiV1DatasetsDatasetIdLabelsPutRequest 
-     * @param {module:api/DatasetApi~apiV1DatasetsDatasetIdLabelsPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApiV1DatasetsDatasetIdLabelsPut200Response}
-     */
-    apiV1DatasetsDatasetIdLabelsPut(datasetId, apiV1DatasetsDatasetIdLabelsPutRequest, callback) {
-      let postBody = apiV1DatasetsDatasetIdLabelsPutRequest;
-      // verify the required parameter 'datasetId' is set
-      if (datasetId === undefined || datasetId === null) {
-        throw new Error("Missing the required parameter 'datasetId' when calling apiV1DatasetsDatasetIdLabelsPut");
-      }
-      // verify the required parameter 'apiV1DatasetsDatasetIdLabelsPutRequest' is set
-      if (apiV1DatasetsDatasetIdLabelsPutRequest === undefined || apiV1DatasetsDatasetIdLabelsPutRequest === null) {
-        throw new Error("Missing the required parameter 'apiV1DatasetsDatasetIdLabelsPutRequest' when calling apiV1DatasetsDatasetIdLabelsPut");
-      }
-
-      let pathParams = {
-        'datasetId': datasetId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = ApiV1DatasetsDatasetIdLabelsPut200Response;
-      return this.apiClient.callApi(
-        '/api/v1/datasets/{datasetId}/labels', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
