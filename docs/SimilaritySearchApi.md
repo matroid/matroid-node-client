@@ -1,6 +1,6 @@
 # MatroidPublicApi.SimilaritySearchApi
 
-All URIs are relative to *https://app.matroid.com*
+All URIs are relative to *https://192.168.86.46*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

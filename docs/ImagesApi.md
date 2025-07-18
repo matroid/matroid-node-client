@@ -1,6 +1,6 @@
 # MatroidPublicApi.ImagesApi
 
-All URIs are relative to *https://app.matroid.com*
+All URIs are relative to *https://192.168.86.46*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -33,7 +33,8 @@ let opts = {
   'url': ["null"], // [String] | URL(s) of image(s) to classify
   'file': ["null"], // [File] | Image file(s) to classify
   'localizationConfidence': 0.5, // Number | Minimum confidence threshold for localizations
-  'numResults': 20 // Number | Maximum number of results to return
+  'numResults': 20, // Number | Maximum number of results to return
+  'textLabels': ["null"] // [String] | Optional list of labels for open set detection
 };
 apiInstance.apiV1DetectorsDetectorIdClassifyImagePost(detectorId, opts, (error, data, response) => {
   if (error) {
@@ -54,6 +55,7 @@ Name | Type | Description  | Notes
  **file** | **[File]**| Image file(s) to classify | [optional] 
  **localizationConfidence** | **Number**| Minimum confidence threshold for localizations | [optional] [default to 0.5]
  **numResults** | **Number**| Maximum number of results to return | [optional] [default to 20]
+ **textLabels** | [**[String]**](String.md)| Optional list of labels for open set detection | [optional] 
 
 ### Return type
 

@@ -32,11 +32,11 @@ class ApiClient {
      * Overrides the default value set in spec file if present
      * @param {String} basePath
      */
-    constructor(basePath = 'https://app.matroid.com') {
+    constructor(basePath = 'https://192.168.86.46') {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default https://app.matroid.com
+         * @default https://192.168.86.46
          */
         this.basePath = basePath.replace(/\/+$/, '');
 
@@ -595,7 +595,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "https://app.matroid.com",
+              'url': "https://192.168.86.46",
               'description': "No description provided",
             }
       ];

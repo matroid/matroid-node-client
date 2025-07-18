@@ -53,6 +53,7 @@ export default class ImagesApi {
      * @param {Array.<File>} [file] Image file(s) to classify
      * @param {Number} [localizationConfidence = 0.5)] Minimum confidence threshold for localizations
      * @param {Number} [numResults = 20)] Maximum number of results to return
+     * @param {Array.<String>} [textLabels] Optional list of labels for open set detection
      * @param {module:api/ImagesApi~apiV1DetectorsDetectorIdClassifyImagePostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApiV1DetectorsDetectorIdClassifyImagePost200Response}
      */
@@ -75,7 +76,8 @@ export default class ImagesApi {
         'url': this.apiClient.buildCollectionParam(opts['url'], 'csv'),
         'file': this.apiClient.buildCollectionParam(opts['file'], 'passthrough'),
         'localizationConfidence': opts['localizationConfidence'],
-        'numResults': opts['numResults']
+        'numResults': opts['numResults'],
+        'textLabels': this.apiClient.buildCollectionParam(opts['textLabels'], 'csv')
       };
 
       let authNames = ['bearerAuth'];

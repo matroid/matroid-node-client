@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **minEmailInterval** | **Number** | How often to send notification emails (seconds) | [optional] [default to 300]
 **minDetectionInterval** | **Number** | How long to wait between reporting new detections (seconds) | [optional] 
 **sendEmailNotifications** | **Boolean** | Whether to send detection notifications through email | [optional] [default to true]
+**notificationRecipients** | **String** | Specifies who should receive notifications. Valid values are &#x60;creator&#x60;, &#x60;all&#x60;. Defaults to &#x60;creator&#x60;. | [optional] 
 **desktopNotifications** | **Boolean** | Whether to send detection notifications through browser notifications | [optional] [default to false]
 **filterStaticDetections** | **Boolean** | Whether to filter out static detections | [optional] [default to false]
 **staticDetectionThreshold** | **Number** | IOU threshold for static detection filter | [optional] [default to 0.5]

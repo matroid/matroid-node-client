@@ -44,6 +44,13 @@ import ApiV1CollectionsCollectionIdGet200Response from './model/ApiV1Collections
 import ApiV1CollectionsCollectionIdGet200ResponseCollection from './model/ApiV1CollectionsCollectionIdGet200ResponseCollection';
 import ApiV1CollectionsCollectionIdGet200ResponseCollectionTasksInner from './model/ApiV1CollectionsCollectionIdGet200ResponseCollectionTasksInner';
 import ApiV1CollectionsPost200Response from './model/ApiV1CollectionsPost200Response';
+import ApiV1DatasetsDatasetIdLabelsPut200Response from './model/ApiV1DatasetsDatasetIdLabelsPut200Response';
+import ApiV1DatasetsDatasetIdLabelsPut400Response from './model/ApiV1DatasetsDatasetIdLabelsPut400Response';
+import ApiV1DatasetsDatasetIdLabelsPut404Response from './model/ApiV1DatasetsDatasetIdLabelsPut404Response';
+import ApiV1DatasetsDatasetIdLabelsPut500Response from './model/ApiV1DatasetsDatasetIdLabelsPut500Response';
+import ApiV1DatasetsDatasetIdLabelsPutRequest from './model/ApiV1DatasetsDatasetIdLabelsPutRequest';
+import ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner from './model/ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner';
+import ApiV1DetectorsDetectorIdAddDataPost200Response from './model/ApiV1DetectorsDetectorIdAddDataPost200Response';
 import ApiV1DetectorsDetectorIdClassifyImagePost200Response from './model/ApiV1DetectorsDetectorIdClassifyImagePost200Response';
 import ApiV1DetectorsDetectorIdClassifyImagePost200ResponsePredictionsInner from './model/ApiV1DetectorsDetectorIdClassifyImagePost200ResponsePredictionsInner';
 import ApiV1DetectorsDetectorIdClassifyImagePost200ResponsePredictionsInnerClassificationsInner from './model/ApiV1DetectorsDetectorIdClassifyImagePost200ResponsePredictionsInnerClassificationsInner';
@@ -416,6 +423,48 @@ export {
      * @property {module:model/ApiV1CollectionsPost200Response}
      */
     ApiV1CollectionsPost200Response,
+
+    /**
+     * The ApiV1DatasetsDatasetIdLabelsPut200Response model constructor.
+     * @property {module:model/ApiV1DatasetsDatasetIdLabelsPut200Response}
+     */
+    ApiV1DatasetsDatasetIdLabelsPut200Response,
+
+    /**
+     * The ApiV1DatasetsDatasetIdLabelsPut400Response model constructor.
+     * @property {module:model/ApiV1DatasetsDatasetIdLabelsPut400Response}
+     */
+    ApiV1DatasetsDatasetIdLabelsPut400Response,
+
+    /**
+     * The ApiV1DatasetsDatasetIdLabelsPut404Response model constructor.
+     * @property {module:model/ApiV1DatasetsDatasetIdLabelsPut404Response}
+     */
+    ApiV1DatasetsDatasetIdLabelsPut404Response,
+
+    /**
+     * The ApiV1DatasetsDatasetIdLabelsPut500Response model constructor.
+     * @property {module:model/ApiV1DatasetsDatasetIdLabelsPut500Response}
+     */
+    ApiV1DatasetsDatasetIdLabelsPut500Response,
+
+    /**
+     * The ApiV1DatasetsDatasetIdLabelsPutRequest model constructor.
+     * @property {module:model/ApiV1DatasetsDatasetIdLabelsPutRequest}
+     */
+    ApiV1DatasetsDatasetIdLabelsPutRequest,
+
+    /**
+     * The ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner model constructor.
+     * @property {module:model/ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner}
+     */
+    ApiV1DatasetsDatasetIdLabelsPutRequestLabelUpdatesInner,
+
+    /**
+     * The ApiV1DetectorsDetectorIdAddDataPost200Response model constructor.
+     * @property {module:model/ApiV1DetectorsDetectorIdAddDataPost200Response}
+     */
+    ApiV1DetectorsDetectorIdAddDataPost200Response,
 
     /**
      * The ApiV1DetectorsDetectorIdClassifyImagePost200Response model constructor.

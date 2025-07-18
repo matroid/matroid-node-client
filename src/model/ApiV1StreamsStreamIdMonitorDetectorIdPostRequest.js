@@ -92,6 +92,9 @@ class ApiV1StreamsStreamIdMonitorDetectorIdPostRequest {
             if (data.hasOwnProperty('sendEmailNotifications')) {
                 obj['sendEmailNotifications'] = ApiClient.convertToType(data['sendEmailNotifications'], 'Boolean');
             }
+            if (data.hasOwnProperty('notificationRecipients')) {
+                obj['notificationRecipients'] = ApiClient.convertToType(data['notificationRecipients'], 'String');
+            }
             if (data.hasOwnProperty('desktopNotifications')) {
                 obj['desktopNotifications'] = ApiClient.convertToType(data['desktopNotifications'], 'Boolean');
             }
@@ -149,6 +152,10 @@ class ApiV1StreamsStreamIdMonitorDetectorIdPostRequest {
         // ensure the json data is a string
         if (data['notificationTimezone'] && !(typeof data['notificationTimezone'] === 'string' || data['notificationTimezone'] instanceof String)) {
             throw new Error("Expected the field `notificationTimezone` to be a primitive type in the JSON string but got " + data['notificationTimezone']);
+        }
+        // ensure the json data is a string
+        if (data['notificationRecipients'] && !(typeof data['notificationRecipients'] === 'string' || data['notificationRecipients'] instanceof String)) {
+            throw new Error("Expected the field `notificationRecipients` to be a primitive type in the JSON string but got " + data['notificationRecipients']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['regionCoords'])) {
@@ -240,6 +247,12 @@ ApiV1StreamsStreamIdMonitorDetectorIdPostRequest.prototype['minDetectionInterval
  * @default true
  */
 ApiV1StreamsStreamIdMonitorDetectorIdPostRequest.prototype['sendEmailNotifications'] = true;
+
+/**
+ * Specifies who should receive notifications. Valid values are `creator`, `all`. Defaults to `creator`.
+ * @member {String} notificationRecipients
+ */
+ApiV1StreamsStreamIdMonitorDetectorIdPostRequest.prototype['notificationRecipients'] = undefined;
 
 /**
  * Whether to send detection notifications through browser notifications

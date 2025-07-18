@@ -14,6 +14,12 @@
 
 import ApiClient from "../ApiClient";
 import ApiV1BucketTasksPost400Response from '../model/ApiV1BucketTasksPost400Response';
+import ApiV1DatasetsDatasetIdLabelsPut200Response from '../model/ApiV1DatasetsDatasetIdLabelsPut200Response';
+import ApiV1DatasetsDatasetIdLabelsPut400Response from '../model/ApiV1DatasetsDatasetIdLabelsPut400Response';
+import ApiV1DatasetsDatasetIdLabelsPut404Response from '../model/ApiV1DatasetsDatasetIdLabelsPut404Response';
+import ApiV1DatasetsDatasetIdLabelsPut500Response from '../model/ApiV1DatasetsDatasetIdLabelsPut500Response';
+import ApiV1DatasetsDatasetIdLabelsPutRequest from '../model/ApiV1DatasetsDatasetIdLabelsPutRequest';
+import ApiV1DetectorsDetectorIdAddDataPost200Response from '../model/ApiV1DetectorsDetectorIdAddDataPost200Response';
 
 /**
 * Dataset service.
@@ -78,6 +84,101 @@ export default class DatasetApi {
       let returnType = File;
       return this.apiClient.callApi(
         '/api/v1/dataset/{datasetId}/media/im/{mediaId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the apiV1DatasetsDatasetIdLabelsPut operation.
+     * @callback module:api/DatasetApi~apiV1DatasetsDatasetIdLabelsPutCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ApiV1DatasetsDatasetIdLabelsPut200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update labels for a dataset
+     * Updates, renames, changes colors, or deletes labels in a dataset. The operation will update all affected annotated images to reflect the label changes. 
+     * @param {String} datasetId The unique identifier of the dataset
+     * @param {module:model/ApiV1DatasetsDatasetIdLabelsPutRequest} apiV1DatasetsDatasetIdLabelsPutRequest 
+     * @param {module:api/DatasetApi~apiV1DatasetsDatasetIdLabelsPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ApiV1DatasetsDatasetIdLabelsPut200Response}
+     */
+    apiV1DatasetsDatasetIdLabelsPut(datasetId, apiV1DatasetsDatasetIdLabelsPutRequest, callback) {
+      let postBody = apiV1DatasetsDatasetIdLabelsPutRequest;
+      // verify the required parameter 'datasetId' is set
+      if (datasetId === undefined || datasetId === null) {
+        throw new Error("Missing the required parameter 'datasetId' when calling apiV1DatasetsDatasetIdLabelsPut");
+      }
+      // verify the required parameter 'apiV1DatasetsDatasetIdLabelsPutRequest' is set
+      if (apiV1DatasetsDatasetIdLabelsPutRequest === undefined || apiV1DatasetsDatasetIdLabelsPutRequest === null) {
+        throw new Error("Missing the required parameter 'apiV1DatasetsDatasetIdLabelsPutRequest' when calling apiV1DatasetsDatasetIdLabelsPut");
+      }
+
+      let pathParams = {
+        'datasetId': datasetId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ApiV1DatasetsDatasetIdLabelsPut200Response;
+      return this.apiClient.callApi(
+        '/api/v1/datasets/{datasetId}/labels', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the apiV1DetectorsDetectorIdAddDataPost operation.
+     * @callback module:api/DatasetApi~apiV1DetectorsDetectorIdAddDataPostCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ApiV1DetectorsDetectorIdAddDataPost200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Add images to a detector's dataset (New Studio)
+     * Adds images to the dataset associated with a given detector (new studio format). The detector must use a dataset and have a valid dataset ID. Images can be uploaded as files (multipart/form-data) or by specifying image IDs for a simple add.
+     * @param {String} detectorId The ID of the detector whose dataset will be updated.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<File>} [file] One or more image files or zip files containing images.
+     * @param {module:api/DatasetApi~apiV1DetectorsDetectorIdAddDataPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ApiV1DetectorsDetectorIdAddDataPost200Response}
+     */
+    apiV1DetectorsDetectorIdAddDataPost(detectorId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'detectorId' is set
+      if (detectorId === undefined || detectorId === null) {
+        throw new Error("Missing the required parameter 'detectorId' when calling apiV1DetectorsDetectorIdAddDataPost");
+      }
+
+      let pathParams = {
+        'detectorId': detectorId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+        'file': this.apiClient.buildCollectionParam(opts['file'], 'passthrough')
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['multipart/form-data'];
+      let accepts = ['application/json'];
+      let returnType = ApiV1DetectorsDetectorIdAddDataPost200Response;
+      return this.apiClient.callApi(
+        '/api/v1/detectors/{detectorId}/add-data', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
